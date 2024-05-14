@@ -5,9 +5,6 @@ metadata:
  # Service name
  name: notes-app-deployment
 spec:
- manifest:
-  - manifest:
-    identifier: notes
  selector:
    # Selector for Pods
    app: notes-app
@@ -17,13 +14,3 @@ spec:
    targetPort: 3000
    protocol: TCP
  type: LoadBalancer
- rules:
-  - http:
-      paths:
-      - path: /notes
-        pathType: Prefix
-        backend:
-          service:
-            name: notes-app-deployment
-            port:
-              number: 80
