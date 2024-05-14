@@ -5,6 +5,9 @@ metadata:
  # Service name
  name: notes-app-deployment
 spec:
+ manifest:
+  - manifest:
+    identifier: notes-app
  selector:
    # Selector for Pods
    app: notes-app
